@@ -1,0 +1,151 @@
+html,
+body,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font: 12px Arimo;
+  color: #ffffff;
+}
+
+.search {
+  padding: 7px 13px 13px;
+  border-bottom: 1px solid #E9E9E9;
+}
+.search input {
+  width: 100%;
+  height: 36px;
+  background: #EEEEEE;
+  border-radius: 30px;
+  border: none;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.toolbar-desk {
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  max-width: 109px;
+  text-align: right;
+}
+.toolbar-desk__title {
+  color: #009C41;
+  margin-bottom: 0px;
+  font-size: 10px;
+  line-height: 10px;
+}
+.toolbar-desk__subtitle {
+  color: #FF7728;
+  margin-top: 3px;
+  font-size: 12px;
+  line-height: 16px;
+}
+.toolbar-logo {
+  padding: 11px;
+}
+
+.login {
+  padding: 0 24px;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center top;
+  background-image: url("img/login_mobile_bg.jpeg");
+}
+.login-title {
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  padding: 50px 20px 0 20px;
+}
+
+.login-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 16px;
+  text-align: right;
+  position: relative;
+}
+.login-header__desk {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: bold;
+}
+.login-header__icon {
+  width: 39px;
+  height: 39px;
+}
+.login-header__icon img {
+  height: 100%;
+  margin: 3px;
+}
+.login-header:before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  background: #FFFFFF;
+  border-radius: 2px;
+  height: 2px;
+  bottom: -12px;
+}
+
+.login-inputs input {
+  height: 40px;
+  width: 100%;
+  background: #FFFFFF;
+  border-radius: 30px;
+  border: none;
+}
+.login-inputs p {
+  text-align: right;
+  font-size: 18px;
+  line-height: 21px;
+}
+.login-inputs--inner {
+  margin-top: 50px;
+}
+.login-inputs--wrap {
+  position: relative;
+}
+.login-inputs--icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 18px;
+  width: 14px;
+  height: 14px;
+}
+.login-inputs--icon img {
+  height: 100%;
+}
+
+.login-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+.login-buttons button {
+  flex: 0 0 47%;
+  border-radius: 35px;
+  border: none;
+  height: 40px;
+  width: 100%;
+  margin: 92px 0 66px;
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 21px;
+}
+.login-buttons button:first-child {
+  background-color: #C4C4C4;
+}
+.login-buttons button:last-child {
+  background-color: #009C41;
+}
+
+/*# sourceMappingURL=style.css.map */
