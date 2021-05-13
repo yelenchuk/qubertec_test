@@ -37,7 +37,7 @@ body {
 }
 .toolbar-desk__title {
   color: #009C41;
-  margin-bottom: 0px;
+  margin-bottom: 0;
   font-size: 10px;
   line-height: 10px;
 }
@@ -49,6 +49,10 @@ body {
 }
 .toolbar-logo {
   padding: 11px;
+}
+
+.header {
+  display: none;
 }
 
 .login {
@@ -81,10 +85,10 @@ body {
 .login-header__icon {
   width: 39px;
   height: 39px;
+  margin-left: 7px;
 }
 .login-header__icon img {
   height: 100%;
-  margin: 3px;
 }
 .login-header:before {
   position: absolute;
@@ -108,13 +112,13 @@ body {
   font-size: 18px;
   line-height: 21px;
 }
-.login-inputs--inner {
+.login-inputs__inner {
   margin-top: 50px;
 }
-.login-inputs--wrap {
+.login-inputs__wrap {
   position: relative;
 }
-.login-inputs--icon {
+.login-inputs__icon {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -122,21 +126,20 @@ body {
   width: 14px;
   height: 14px;
 }
-.login-inputs--icon img {
+.login-inputs__icon img {
   height: 100%;
 }
 
 .login-buttons {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 .login-buttons button {
-  flex: 0 0 47%;
   border-radius: 35px;
   border: none;
   height: 40px;
-  width: 100%;
-  margin: 92px 0 66px;
+  width: 156px;
+  margin: 92px 10px 66px;
   color: #ffffff;
   font-size: 18px;
   line-height: 21px;
@@ -146,6 +149,80 @@ body {
 }
 .login-buttons button:last-child {
   background-color: #009C41;
+}
+
+@media (min-width: 1024px) {
+  .search {
+    display: none;
+  }
+
+  .toolbar {
+    padding: 10px 20px;
+  }
+  .toolbar-logo {
+    width: 38px;
+    height: 38px;
+  }
+  .toolbar-logo img {
+    width: 100%;
+  }
+  .toolbar-desk__title {
+    font-size: 16px;
+    line-height: 18px;
+  }
+  .toolbar-desk__subtitle {
+    color: #009C41;
+  }
+
+  .header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    min-height: 106px;
+    background: #F5F5F5;
+    color: #5F5F5F;
+    padding: 0 60px;
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  .login {
+    background-image: url("img/login_bg.jpeg");
+  }
+  .login-header {
+    padding-top: 48px;
+  }
+  .login-header__desk {
+    font-size: 48px;
+    line-height: 55px;
+  }
+  .login-header__icon {
+    width: 76px;
+    height: 76px;
+  }
+  .login-header:before {
+    height: 5px;
+    min-width: 1076px;
+    bottom: 0;
+  }
+  .login-title {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .login-inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .login-inputs input {
+    width: 350px;
+    height: 58px;
+  }
+  .login-buttons button {
+    width: 350px;
+    height: 58px;
+    margin: 90px 20px 70px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
