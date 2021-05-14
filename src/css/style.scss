@@ -35,13 +35,14 @@ $padding-11: 11px;
   height: $height;
 }
 
-
 body {
   font: $font-size-12 $font-family;
   color: $primary-color;
 }
 
-.search {
+//------------------------> Login mobile <------------------------
+
+.search-bar {
   padding: 7px $padding-13 $padding-13;
   border-bottom: 1px solid #E9E9E9;
 
@@ -180,7 +181,6 @@ body {
   }
 }
 
-
 .login-buttons {
   display: flex;
   justify-content: center;
@@ -205,9 +205,108 @@ body {
   }
 }
 
+
+//------------------------> main mobile <------------------------
+
+.main {
+  padding: 0 $padding-24;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center top;
+  background-image: url("img/login_mobile_bg.jpeg");
+
+  &-header {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      background: #FFFFFF;
+      border-radius: 2px;
+      height: 2px;
+      bottom: -25px;
+    }
+
+
+    &__title {
+      display: flex;
+      align-items: center;
+      background: #FFFFFF;
+      border-radius: 35px;
+      height: 40px;
+      margin: 20px 0;
+
+      & p {
+        font-size: $font-size-18;
+        line-height: $line-height-21;
+        height: 40px;
+
+        &:first-child {
+          color: $color-dark-gray;
+          flex: 1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        &:last-child {
+          flex: 1;
+          border-radius: 30px;
+          background: $color-orange;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: white;
+      }
+      }
+    }
+
+    &__icon {
+      display: none;
+    }
+
+    &__search {
+      display: flex;
+      justify-content: space-between;
+      .search {
+
+        &-input {
+          background: #FFFFFF;
+          border-radius: 30px;
+          border: none;
+          height: 40px;
+          width: 100%;
+          margin-left: 17px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          color: #B1B1B1;
+          padding-left: 15px;
+
+          & p {
+            font-size: $font-size-18;
+            line-height: $line-height-21;
+            padding: 15px;
+          }
+        }
+        &-button {
+          @include block-size(40px, 40px);
+        }
+      }
+
+    }
+    }
+}
+
+
+
 $breakpoint-desktop: 1024px;
 @media (min-width: $breakpoint-desktop) {
 
+  //------------------------> Login desktop <------------------------
   .search {
     display: none;
   }
@@ -284,7 +383,13 @@ $breakpoint-desktop: 1024px;
       }
     }
   }
+
+  //------------------------> Main desktop <------------------------
+
 }
+
+
+
 
 
 
