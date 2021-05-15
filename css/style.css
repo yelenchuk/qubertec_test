@@ -64,10 +64,10 @@ body {
 
 .login {
   padding: 0 24px;
-  min-height: 100vh;
+  min-height: 101vh;
   background-size: cover;
   background-position: center top;
-  background-image: src("img/login_mobile_bg.jpeg");
+  background-image: url("../img/login_mobile_bg.jpeg");
 }
 .login-title {
   font-size: 24px;
@@ -162,7 +162,7 @@ body {
   min-height: 100vh;
   background-size: cover;
   background-position: center top;
-  background-image: url("img/login_mobile_bg.jpeg");
+  background-image: url("../img/login_mobile_bg.jpeg");
 }
 .wrapper .main {
   margin: 0 auto;
@@ -300,6 +300,9 @@ body {
   align-items: flex-end;
   justify-content: flex-end;
 }
+.wrapper .main-inner__sheet {
+  display: none;
+}
 
 @media (min-width: 1024px) {
   .search-bar {
@@ -337,7 +340,7 @@ body {
   }
 
   .login {
-    background-image: url("img/login_bg.jpeg");
+    background-image: url("../img/login_bg.jpeg");
   }
   .login-header {
     padding-top: 48px;
@@ -375,7 +378,7 @@ body {
   }
 
   .wrapper {
-    background-image: url("img/login_bg.jpeg");
+    background-image: url("../img/login_bg.jpeg");
   }
   .wrapper .main {
     max-width: 1076px;
@@ -405,8 +408,11 @@ body {
     display: block;
     margin-left: 26px;
   }
-  .wrapper .main-header__search .search-button {
+  .wrapper .main-header__search .search-button__small {
     display: none;
+  }
+  .wrapper .main-header__search .search-button__large {
+    display: block;
   }
   .wrapper .main-header__search .search-button__large img {
     width: 15px;
@@ -427,6 +433,9 @@ body {
   }
   .wrapper .main-inner__card {
     display: none;
+  }
+  .wrapper .main-inner__sheet {
+    display: block;
   }
   .wrapper .main-inner__sheet .sheet-table {
     width: 100%;
