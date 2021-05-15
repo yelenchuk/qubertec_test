@@ -16,12 +16,16 @@ $font-size-10: 10px;
 $font-size-12: 12px;
 $font-size-16: 16px;
 $font-size-18: 18px;
+$font-size-20: 20px;
+$font-size-30: 30px;
 $font-weight-bold: bold;
 $line-height-10: 10px;
 $line-height-16: 16px;
 $line-height-18: 18px;
 $line-height-21: 21px;
+$line-height-23: 23px;
 $line-height-28: 28px;
+$line-height-34: 34px;
 $line-height-55: 55px;
 
 
@@ -59,6 +63,7 @@ body {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  height: 63px;
 
   &-desk {
     font-weight: $font-weight-bold;
@@ -66,6 +71,7 @@ body {
     flex-direction: column;
     max-width: 109px;
     text-align: right;
+    padding: 0 10px;
 
     &__title {
       color: $color-green;
@@ -83,7 +89,12 @@ body {
   }
 
   &-logo {
-    padding: $padding-11;
+    @include block-size(30px, 30px);
+    margin-right: 10px;
+
+    & img {
+      height: 100%;
+    }
   }
 }
 
@@ -96,7 +107,7 @@ body {
   min-height: 100vh;
   background-size: cover;
   background-position: center top;
-  background-image: url("img/login_mobile_bg.jpeg");
+  background-image: src("img/login_mobile_bg.jpeg");
 
   &-title {
     font-size: $font-size-12 * 2;
@@ -227,7 +238,7 @@ body {
       background: #FFFFFF;
       border-radius: 2px;
       height: 2px;
-      bottom: -25px;
+      bottom: 0;
     }
 
 
@@ -260,7 +271,7 @@ body {
           align-items: center;
           justify-content: center;
           color: white;
-      }
+        }
       }
     }
 
@@ -271,6 +282,8 @@ body {
     &__search {
       display: flex;
       justify-content: space-between;
+      padding-bottom: 20px;
+
       .search {
 
         &-input {
@@ -292,15 +305,96 @@ body {
             padding: 15px;
           }
         }
+
         &-button {
           @include block-size(40px, 40px);
         }
       }
 
     }
-    }
-}
+  }
 
+  &-inner {
+    &__card {
+      background: white;
+      border-radius: 30px;
+      padding: 15px 10px 25px;
+      margin-top: 25px;
+
+      .card {
+        &-toolbar {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          position: relative;
+          padding-bottom: 13px;
+          margin-bottom: 13px;
+
+          &:before {
+            position: absolute;
+            content: "";
+            width: 100%;
+            background: #1D4076;
+            border-radius: 2px;
+            height: 2px;
+            bottom: 0;
+          }
+
+          &__tools img {
+            margin-right: 10px;
+          }
+        }
+
+        &-body {
+          text-align: right;
+
+          &__item {
+            padding-right: 10px;
+            padding-bottom: 10px;
+            display: flex;
+
+            .item {
+
+              &-inner {
+                flex: 1;
+              }
+
+              &-title {
+                color: #797979;
+                font-size: $font-size-18;
+                line-height: $line-height-21;
+              }
+
+              &-deck {
+                font-weight: $font-weight-bold;
+                color: #21325E;
+                font-size: $font-size-20;
+                line-height: $line-height-23;
+
+                &__other {
+                  color: #009C41;
+                  display: flex;
+                  height: 100%;
+                  align-items: flex-end;
+                  justify-content: flex-end;
+                }
+
+              }
+
+            }
+
+            //:last-child,
+            //:nth-last-child(2) {
+            //  display: flex;
+            //  justify-content: flex-end;
+            //}
+          }
+        }
+      }
+    }
+  }
+
+}
 
 
 $breakpoint-desktop: 1024px;
@@ -316,10 +410,12 @@ $breakpoint-desktop: 1024px;
 
     &-logo {
       @include block-size(38px, 38px);
+
       & img {
         width: 100%;
       }
     }
+
     &-desk {
       &__title {
         font-size: $font-size-16;
@@ -350,32 +446,39 @@ $breakpoint-desktop: 1024px;
 
     &-header {
       padding-top: 48px;
+
       &__desk {
         font-size: $font-size-12 * 4;
         line-height: $line-height-55;
       }
+
       &__icon {
         width: 76px;
         height: 76px;
       }
+
       &:before {
         height: 5px;
         min-width: 1076px;
         bottom: 0;
       }
     }
+
     &-title {
       font-size: $font-size-12 *2;
       line-height: $line-height-28;
     }
+
     &-inputs {
       display: flex;
       flex-direction: column;
       align-items: center;
+
       input {
         @include block-size(350px, 58px);
       }
     }
+
     &-buttons {
       button {
         @include block-size(350px, 58px);

@@ -27,6 +27,7 @@ body {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  height: 63px;
 }
 .toolbar-desk {
   font-weight: bold;
@@ -34,6 +35,7 @@ body {
   flex-direction: column;
   max-width: 109px;
   text-align: right;
+  padding: 0 10px;
 }
 .toolbar-desk__title {
   color: #009C41;
@@ -48,7 +50,12 @@ body {
   line-height: 16px;
 }
 .toolbar-logo {
-  padding: 11px;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+.toolbar-logo img {
+  height: 100%;
 }
 
 .header {
@@ -60,7 +67,7 @@ body {
   min-height: 100vh;
   background-size: cover;
   background-position: center top;
-  background-image: url("img/login_mobile_bg.jpeg");
+  background-image: src("img/login_mobile_bg.jpeg");
 }
 .login-title {
   font-size: 24px;
@@ -170,7 +177,7 @@ body {
   background: #FFFFFF;
   border-radius: 2px;
   height: 2px;
-  bottom: -25px;
+  bottom: 0;
 }
 .main-header__title {
   display: flex;
@@ -207,6 +214,7 @@ body {
 .main-header__search {
   display: flex;
   justify-content: space-between;
+  padding-bottom: 20px;
 }
 .main-header__search .search-input {
   background: #FFFFFF;
@@ -229,6 +237,61 @@ body {
 .main-header__search .search-button {
   width: 40px;
   height: 40px;
+}
+.main-inner__card {
+  background: white;
+  border-radius: 30px;
+  padding: 15px 10px 25px;
+  margin-top: 25px;
+}
+.main-inner__card .card-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding-bottom: 13px;
+  margin-bottom: 13px;
+}
+.main-inner__card .card-toolbar:before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  background: #1D4076;
+  border-radius: 2px;
+  height: 2px;
+  bottom: 0;
+}
+.main-inner__card .card-toolbar__tools img {
+  margin-right: 10px;
+}
+.main-inner__card .card-body {
+  text-align: right;
+}
+.main-inner__card .card-body__item {
+  padding-right: 10px;
+  padding-bottom: 10px;
+  display: flex;
+}
+.main-inner__card .card-body__item .item-inner {
+  flex: 1;
+}
+.main-inner__card .card-body__item .item-title {
+  color: #797979;
+  font-size: 18px;
+  line-height: 21px;
+}
+.main-inner__card .card-body__item .item-deck {
+  font-weight: bold;
+  color: #21325E;
+  font-size: 20px;
+  line-height: 23px;
+}
+.main-inner__card .card-body__item .item-deck__other {
+  color: #009C41;
+  display: flex;
+  height: 100%;
+  align-items: flex-end;
+  justify-content: flex-end;
 }
 
 @media (min-width: 1024px) {
