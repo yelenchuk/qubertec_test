@@ -14,9 +14,11 @@ $color-dark-gray: #5F5F5F;
 // font variables
 $font-size-10: 10px;
 $font-size-12: 12px;
+$font-size-14: 14px;
 $font-size-16: 16px;
 $font-size-18: 18px;
 $font-size-20: 20px;
+$font-size-24: 24px;
 $font-size-30: 30px;
 $font-weight-bold: bold;
 $line-height-10: 10px;
@@ -218,182 +220,190 @@ body {
 
 
 //------------------------> main mobile <------------------------
-
-.main {
-  padding: 0 $padding-24;
+.wrapper {
   min-height: 100vh;
   background-size: cover;
   background-position: center top;
   background-image: url("img/login_mobile_bg.jpeg");
 
-  &-header {
-    display: flex;
-    flex-direction: column;
-    position: relative;
 
-    &:before {
-      position: absolute;
-      content: "";
-      width: 100%;
-      background: #FFFFFF;
-      border-radius: 2px;
-      height: 2px;
-      bottom: 0;
-    }
+  & .main {
+    margin: 0 auto;
+    padding: 0 $padding-24;
 
-
-    &__title {
+    &-header {
       display: flex;
-      align-items: center;
-      background: #FFFFFF;
-      border-radius: 35px;
-      height: 40px;
-      margin: 20px 0;
+      flex-direction: column;
+      position: relative;
 
-      & p {
-        font-size: $font-size-18;
-        line-height: $line-height-21;
-        height: 40px;
-
-        &:first-child {
-          color: $color-dark-gray;
-          flex: 1;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-
-        &:last-child {
-          flex: 1;
-          border-radius: 30px;
-          background: $color-orange;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          color: white;
-        }
+      &:before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        background: #FFFFFF;
+        border-radius: 2px;
+        height: 2px;
+        bottom: 0;
       }
-    }
 
-    &__icon {
-      display: none;
-    }
 
-    &__search {
-      display: flex;
-      justify-content: space-between;
-      padding-bottom: 20px;
+      &__account {
+        display: flex;
+        align-items: center;
 
-      .search {
-
-        &-input {
-          background: #FFFFFF;
-          border-radius: 30px;
-          border: none;
-          height: 40px;
-          width: 100%;
-          margin-left: 17px;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          color: #B1B1B1;
-          padding-left: 15px;
-
-          & p {
+        .account {
+          &-title {
+            background: #FFFFFF;
+            border-radius: 35px;
+            height: 40px;
+            margin: 20px 0;
             font-size: $font-size-18;
             line-height: $line-height-21;
-            padding: 15px;
+            display: flex;
+            flex: 1;
+
+            & div {
+              &:first-child {
+                color: $color-dark-gray;
+                flex: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              }
+
+              &:last-child {
+                flex: 1;
+                border-radius: 30px;
+                background: $color-orange;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+              }
+            }
+          }
+
+          &-icon {
+            display: none;
           }
         }
 
-        &-button {
-          @include block-size(40px, 40px);
-        }
       }
 
-    }
-  }
 
-  &-inner {
-    &__card {
-      background: white;
-      border-radius: 30px;
-      padding: 15px 10px 25px;
-      margin-top: 25px;
+      &__search {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 20px;
 
-      .card {
-        &-toolbar {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          position: relative;
-          padding-bottom: 13px;
-          margin-bottom: 13px;
+        .search {
 
-          &:before {
-            position: absolute;
-            content: "";
+          &-input {
+            background: #FFFFFF;
+            border-radius: 30px;
+            border: none;
+            height: 40px;
             width: 100%;
-            background: #1D4076;
-            border-radius: 2px;
-            height: 2px;
-            bottom: 0;
+            margin-left: 17px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: #B1B1B1;
+            padding-left: 15px;
+
+            & p {
+              font-size: $font-size-18;
+              line-height: $line-height-21;
+              padding: 15px;
+            }
           }
 
-          &__tools img {
-            margin-right: 10px;
+          &-button {
+            @include block-size(40px, 40px);
+            &__large {
+              display: none;
+            }
           }
         }
 
-        &-body {
-          text-align: right;
+      }
+    }
 
-          &__item {
-            padding-right: 10px;
-            padding-bottom: 10px;
+    &-inner {
+      &__card {
+        background: white;
+        border-radius: 30px;
+        padding: 15px 10px 25px;
+        margin-top: 25px;
+
+        .card {
+          &-toolbar {
             display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            padding-bottom: 13px;
+            margin-bottom: 13px;
 
-            .item {
+            &:before {
+              position: absolute;
+              content: "";
+              width: 100%;
+              background: #1D4076;
+              border-radius: 2px;
+              height: 2px;
+              bottom: 0;
+            }
 
-              &-inner {
-                flex: 1;
-              }
+            &__tools img {
+              margin-right: 10px;
+            }
+          }
 
-              &-title {
-                color: #797979;
-                font-size: $font-size-18;
-                line-height: $line-height-21;
-              }
+          &-body {
+            text-align: right;
 
-              &-deck {
-                font-weight: $font-weight-bold;
-                color: #21325E;
-                font-size: $font-size-20;
-                line-height: $line-height-23;
+            &__item {
+              padding-right: 10px;
+              padding-bottom: 10px;
+              display: flex;
 
-                &__other {
-                  color: #009C41;
-                  display: flex;
-                  height: 100%;
-                  align-items: flex-end;
-                  justify-content: flex-end;
+              .item {
+
+                &-inner {
+                  flex: 1;
+                }
+
+                &-title {
+                  color: #797979;
+                  font-size: $font-size-18;
+                  line-height: $line-height-21;
+                }
+
+                &-deck {
+                  font-weight: $font-weight-bold;
+                  color: #21325E;
+                  font-size: $font-size-20;
+                  line-height: $line-height-23;
+
+                  &__other {
+                    color: #009C41;
+                    display: flex;
+                    height: 100%;
+                    align-items: flex-end;
+                    justify-content: flex-end;
+                  }
+
                 }
 
               }
-
             }
-
-            //:last-child,
-            //:nth-last-child(2) {
-            //  display: flex;
-            //  justify-content: flex-end;
-            //}
           }
         }
       }
     }
-  }
 
+  }
 }
 
 
@@ -401,12 +411,12 @@ $breakpoint-desktop: 1024px;
 @media (min-width: $breakpoint-desktop) {
 
   //------------------------> Login desktop <------------------------
-  .search {
+  .search-bar {
     display: none;
   }
 
   .toolbar {
-    padding: 10px 20px;
+    padding: 22px 20px;
 
     &-logo {
       @include block-size(38px, 38px);
@@ -488,6 +498,174 @@ $breakpoint-desktop: 1024px;
   }
 
   //------------------------> Main desktop <------------------------
+
+  .wrapper {
+    background-image: url("img/login_bg.jpeg");
+
+    & .main {
+      max-width: 1076px;
+
+      &-header {
+
+        &:before {
+          content: none;
+        }
+
+        &__account {
+          position: relative;
+          margin-bottom: 40px;
+
+          &:before {
+            position: absolute;
+            content: "";
+            width: 100%;
+            background: #FFFFFF;
+            border-radius: 2px;
+            height: 5px;
+            bottom: 0;
+          }
+
+          .account {
+            &-title {
+              height: 58px;
+              font-size: $font-size-30;
+              line-height: $line-height-34;
+            }
+
+            &-icon {
+              display: block;
+              margin-left: 26px;
+            }
+          }
+        }
+
+        &__search {
+          .search {
+            &-button {
+              display: none;
+            }
+
+            &-button {
+              &__large {
+                & img {
+                  width: 15px;
+                  margin-right: 10px;
+                }
+
+                & button {
+                  @include block-size(284px, 58px);
+                  background: $color-green;
+                  border-radius: 35px;
+                  border: none;
+                  color: white;
+                  font-size: $font-size-24;
+                  line-height: $line-height-28;
+                }
+              }
+            }
+
+            &-input {
+              height: 58px;
+            }
+          }
+        }
+      }
+
+      &-inner {
+        &__card {
+          display: none;
+        }
+
+        &__sheet {
+          .sheet {
+            &-table {
+              width: 100%;
+              font-size: $font-size-14;
+              line-height: $line-height-16;
+              border-spacing: 0 10px;
+
+
+              &__header {
+              }
+
+              &__inner {
+                text-align: center;
+                color: #21325E;
+                background: #ffffff;
+                border: none;
+                height: 45px;
+
+                &:hover {
+                  background: $color-orange;
+                  color: white;
+                  td {
+                    &:first-child {
+                      div {
+                        &:first-child {
+                          display: none;
+                        }
+                        &:last-child {
+                          display: block;
+                        }
+                      }
+                    }
+                    &:last-child {
+                      .tools {
+                        display: flex;
+                      }
+                    }
+                  }
+                }
+
+                td {
+                  position: relative;
+                  &:before {
+                    position: absolute;
+                    content: "";
+                    width: 1px;
+                    height: 28px;
+                    background: #E5E5E5;
+                    top: 10px;
+                    right: 0;
+                  }
+                  &:first-child {
+                    border-top-left-radius: 35px;
+                    border-bottom-left-radius: 35px;
+
+                    div {
+                      &:last-child {
+                        display: none;
+                      }
+                    }
+                  }
+                  &:last-child {
+                    &:before{
+                      content: none;
+                    }
+                    border-top-right-radius: 35px;
+                    border-bottom-right-radius: 35px;
+                    .tools {
+                      position: absolute;
+                      display: none;
+                      top: 0;
+                      left: 55px;
+                      div {
+                        &:first-child {
+                          padding-right: 10px;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+        }
+      }
+    }
+  }
+
 
 }
 
