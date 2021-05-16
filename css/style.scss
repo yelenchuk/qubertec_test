@@ -41,6 +41,12 @@ $padding-11: 11px;
   height: $height;
 }
 
+@mixin font-style($size, $line, $weight) {
+  font-size: $size;
+  line-height: $line;
+  font-weight: $weight;
+}
+
 body {
   font: $font-size-12 $font-family;
   color: $primary-color;
@@ -53,10 +59,14 @@ body {
   border-bottom: 1px solid #E9E9E9;
 
   input {
+    &:focus {
+      outline: none;
+    }
     @include block-size(100%, 36px);
     background: #EEEEEE;
     border-radius: 30px;
     border: none;
+    text-align: end;
   }
 }
 
@@ -80,6 +90,7 @@ body {
       margin-bottom: 0;
       font-size: $font-size-10;
       line-height: $line-height-10;
+      @include font-style(10px,10px,normal);
     }
 
     &__subtitle {
@@ -157,11 +168,15 @@ body {
 
 .login-inputs {
   input {
+    &:focus {
+      outline: none;
+    }
     height: 40px;
     width: 100%;
     background: #FFFFFF;
     border-radius: 30px;
     border: none;
+    text-align: end;
   }
 
   p {
@@ -196,14 +211,14 @@ body {
 
 .login-buttons {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 
   button {
     border-radius: 35px;
     border: none;
     height: 40px;
     width: 156px;
-    margin: 92px 10px 66px;
+    margin-top: 90px;
     color: $primary-color;
     font-size: $font-size-18;
     line-height: $line-height-21;
@@ -225,6 +240,7 @@ body {
   background-size: cover;
   background-position: center top;
   background-image: url("../img/login_mobile_bg.jpeg");
+  padding-bottom: 30px;
 
 
   & .main {
@@ -307,14 +323,21 @@ body {
             margin-left: 17px;
             display: flex;
             align-items: center;
-            justify-content: space-between;
             color: #B1B1B1;
             padding-left: 15px;
 
-            & p {
-              font-size: $font-size-18;
-              line-height: $line-height-21;
-              padding: 15px;
+            & input {
+              &:focus {
+                outline: none;
+              }
+              &::placeholder {
+                @include font-style(18px,21px,normal);
+              }
+              flex: 1;
+              border: none;
+              border-radius: 30px;
+              text-align: end;
+              padding-right: 10px;
             }
           }
 
@@ -495,6 +518,7 @@ $breakpoint-desktop: 1024px;
     }
 
     &-buttons {
+      justify-content: center;
       button {
         @include block-size(350px, 58px);
         margin: 90px 20px 70px;
@@ -506,6 +530,7 @@ $breakpoint-desktop: 1024px;
 
   .wrapper {
     background-image: url("../img/login_bg.jpeg");
+    padding-bottom: 20px;
 
     & .main {
       max-width: 1076px;
@@ -659,6 +684,7 @@ $breakpoint-desktop: 1024px;
 
                     border-top-right-radius: 35px;
                     border-bottom-right-radius: 35px;
+                    padding-right: 10px;
 
                     .tools {
                       position: absolute;
@@ -668,7 +694,7 @@ $breakpoint-desktop: 1024px;
 
                       div {
                         &:first-child {
-                          padding-right: 10px;
+                          padding: 0 10px;
                         }
                       }
                     }

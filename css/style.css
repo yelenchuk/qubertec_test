@@ -21,6 +21,10 @@ body {
   background: #EEEEEE;
   border-radius: 30px;
   border: none;
+  text-align: end;
+}
+.search-bar input:focus {
+  outline: none;
 }
 
 .toolbar {
@@ -42,6 +46,9 @@ body {
   margin-bottom: 0;
   font-size: 10px;
   line-height: 10px;
+  font-size: 10px;
+  line-height: 10px;
+  font-weight: normal;
 }
 .toolbar-desk__subtitle {
   color: #FF7728;
@@ -113,6 +120,10 @@ body {
   background: #FFFFFF;
   border-radius: 30px;
   border: none;
+  text-align: end;
+}
+.login-inputs input:focus {
+  outline: none;
 }
 .login-inputs p {
   text-align: right;
@@ -139,14 +150,14 @@ body {
 
 .login-buttons {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
 .login-buttons button {
   border-radius: 35px;
   border: none;
   height: 40px;
   width: 156px;
-  margin: 92px 10px 66px;
+  margin-top: 90px;
   color: #ffffff;
   font-size: 18px;
   line-height: 21px;
@@ -163,6 +174,7 @@ body {
   background-size: cover;
   background-position: center top;
   background-image: url("../img/login_mobile_bg.jpeg");
+  padding-bottom: 30px;
 }
 .wrapper .main {
   margin: 0 auto;
@@ -229,14 +241,23 @@ body {
   margin-left: 17px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   color: #B1B1B1;
   padding-left: 15px;
 }
-.wrapper .main-header__search .search-input p {
+.wrapper .main-header__search .search-input input {
+  flex: 1;
+  border: none;
+  border-radius: 30px;
+  text-align: end;
+  padding-right: 10px;
+}
+.wrapper .main-header__search .search-input input:focus {
+  outline: none;
+}
+.wrapper .main-header__search .search-input input::placeholder {
   font-size: 18px;
   line-height: 21px;
-  padding: 15px;
+  font-weight: normal;
 }
 .wrapper .main-header__search .search-button {
   width: 40px;
@@ -371,6 +392,9 @@ body {
     width: 350px;
     height: 58px;
   }
+  .login-buttons {
+    justify-content: center;
+  }
   .login-buttons button {
     width: 350px;
     height: 58px;
@@ -379,6 +403,7 @@ body {
 
   .wrapper {
     background-image: url("../img/login_bg.jpeg");
+    padding-bottom: 20px;
   }
   .wrapper .main {
     max-width: 1076px;
@@ -485,6 +510,7 @@ body {
   .wrapper .main-inner__sheet .sheet-table__inner td:last-child {
     border-top-right-radius: 35px;
     border-bottom-right-radius: 35px;
+    padding-right: 10px;
   }
   .wrapper .main-inner__sheet .sheet-table__inner td:last-child:before {
     content: none;
@@ -496,7 +522,7 @@ body {
     left: 55px;
   }
   .wrapper .main-inner__sheet .sheet-table__inner td:last-child .tools div:first-child {
-    padding-right: 10px;
+    padding: 0 10px;
   }
 }
 
