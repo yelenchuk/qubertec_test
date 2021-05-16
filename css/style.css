@@ -46,8 +46,6 @@ body {
   margin-bottom: 0;
   font-size: 10px;
   line-height: 10px;
-  font-size: 10px;
-  line-height: 10px;
   font-weight: normal;
 }
 .toolbar-desk__subtitle {
@@ -55,6 +53,7 @@ body {
   margin-top: 3px;
   font-size: 12px;
   line-height: 16px;
+  font-weight: normal;
 }
 .toolbar-logo {
   width: 30px;
@@ -79,6 +78,7 @@ body {
 .login-title {
   font-size: 24px;
   line-height: 28px;
+  font-weight: normal;
   text-align: center;
   padding: 50px 20px 0 20px;
 }
@@ -129,6 +129,7 @@ body {
   text-align: right;
   font-size: 18px;
   line-height: 21px;
+  font-weight: normal;
 }
 .login-inputs__inner {
   margin-top: 50px;
@@ -161,6 +162,10 @@ body {
   color: #ffffff;
   font-size: 18px;
   line-height: 21px;
+  font-weight: normal;
+}
+.login-buttons button:focus {
+  outline: none;
 }
 .login-buttons button:first-child {
   background-color: #C4C4C4;
@@ -205,6 +210,7 @@ body {
   margin: 20px 0;
   font-size: 18px;
   line-height: 21px;
+  font-weight: normal;
   display: flex;
   flex: 1;
 }
@@ -307,12 +313,13 @@ body {
   color: #797979;
   font-size: 18px;
   line-height: 21px;
+  font-weight: normal;
 }
 .wrapper .main-inner__card .card-body__item .item-deck {
-  font-weight: bold;
   color: #21325E;
   font-size: 20px;
   line-height: 23px;
+  font-weight: bold;
 }
 .wrapper .main-inner__card .card-body__item .item-deck__other {
   color: #009C41;
@@ -343,6 +350,7 @@ body {
   .toolbar-desk__title {
     font-size: 16px;
     line-height: 18px;
+    font-weight: normal;
   }
   .toolbar-desk__subtitle {
     color: #009C41;
@@ -358,6 +366,7 @@ body {
     padding: 0 60px;
     font-size: 16px;
     line-height: 18px;
+    font-weight: normal;
   }
 
   .login {
@@ -369,6 +378,7 @@ body {
   .login-header__desk {
     font-size: 48px;
     line-height: 55px;
+    font-weight: normal;
   }
   .login-header__icon {
     width: 76px;
@@ -382,11 +392,17 @@ body {
   .login-title {
     font-size: 24px;
     line-height: 28px;
+    font-weight: normal;
   }
   .login-inputs {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  .login-inputs p {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: normal;
   }
   .login-inputs input {
     width: 350px;
@@ -398,6 +414,9 @@ body {
   .login-buttons button {
     width: 350px;
     height: 58px;
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: normal;
     margin: 90px 20px 70px;
   }
 
@@ -406,7 +425,7 @@ body {
     padding-bottom: 20px;
   }
   .wrapper .main {
-    max-width: 1076px;
+    max-width: 890px;
   }
   .wrapper .main-header:before {
     content: none;
@@ -428,6 +447,7 @@ body {
     height: 58px;
     font-size: 30px;
     line-height: 34px;
+    font-weight: normal;
   }
   .wrapper .main-header__account .account-icon {
     display: block;
@@ -452,6 +472,10 @@ body {
     color: white;
     font-size: 24px;
     line-height: 28px;
+    font-weight: normal;
+  }
+  .wrapper .main-header__search .search-button__large button:focus {
+    outline: none;
   }
   .wrapper .main-header__search .search-input {
     height: 58px;
@@ -466,6 +490,7 @@ body {
     width: 100%;
     font-size: 14px;
     line-height: 16px;
+    font-weight: normal;
     border-spacing: 0 10px;
   }
   .wrapper .main-inner__sheet .sheet-table__inner {

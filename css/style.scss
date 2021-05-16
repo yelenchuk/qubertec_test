@@ -12,24 +12,8 @@ $color-dark-gray: #5F5F5F;
 
 
 // font variables
-$font-size-10: 10px;
 $font-size-12: 12px;
-$font-size-14: 14px;
-$font-size-16: 16px;
-$font-size-18: 18px;
-$font-size-20: 20px;
-$font-size-24: 24px;
-$font-size-30: 30px;
 $font-weight-bold: bold;
-$line-height-10: 10px;
-$line-height-16: 16px;
-$line-height-18: 18px;
-$line-height-21: 21px;
-$line-height-23: 23px;
-$line-height-28: 28px;
-$line-height-34: 34px;
-$line-height-55: 55px;
-
 
 // padding variables
 $padding-13: 13px;
@@ -88,16 +72,13 @@ body {
     &__title {
       color: $color-green;
       margin-bottom: 0;
-      font-size: $font-size-10;
-      line-height: $line-height-10;
       @include font-style(10px,10px,normal);
     }
 
     &__subtitle {
       color: $color-orange;
       margin-top: 3px;
-      font-size: $font-size-12;
-      line-height: $line-height-16;
+      @include font-style(12px,16px,normal);
     }
   }
 
@@ -123,8 +104,7 @@ body {
   background-image: url("../img/login_mobile_bg.jpeg");
 
   &-title {
-    font-size: $font-size-12 * 2;
-    line-height: $line-height-28;
+    @include font-style(24px,28px,normal);
     text-align: center;
     padding: 50px 20px 0 20px;
   }
@@ -139,9 +119,7 @@ body {
   position: relative;
 
   &__desk {
-    font-size: $font-size-12 * 2;
-    line-height: $line-height-28;
-    font-weight: $font-weight-bold;
+    @include font-style(24px,28px,bold);
   }
 
   &__icon {
@@ -181,8 +159,7 @@ body {
 
   p {
     text-align: right;
-    font-size: $font-size-18;
-    line-height: $line-height-21;
+    @include font-style(18px,21px,normal);
   }
 
   &__inner {
@@ -214,14 +191,16 @@ body {
   justify-content: space-between;
 
   button {
+    &:focus {
+      outline: none;
+    }
     border-radius: 35px;
     border: none;
     height: 40px;
     width: 156px;
     margin-top: 90px;
     color: $primary-color;
-    font-size: $font-size-18;
-    line-height: $line-height-21;
+    @include font-style(18px,21px,normal);
 
     &:first-child {
       background-color: $color-gray;
@@ -273,8 +252,7 @@ body {
             border-radius: 35px;
             height: 40px;
             margin: 20px 0;
-            font-size: $font-size-18;
-            line-height: $line-height-21;
+            @include font-style(18px,21px,normal);
             display: flex;
             flex: 1;
 
@@ -400,15 +378,12 @@ body {
 
                 &-title {
                   color: #797979;
-                  font-size: $font-size-18;
-                  line-height: $line-height-21;
+                  @include font-style(18px,21px,normal);
                 }
 
                 &-deck {
-                  font-weight: $font-weight-bold;
                   color: #21325E;
-                  font-size: $font-size-20;
-                  line-height: $line-height-23;
+                  @include font-style(20px,23px,bold);
 
                   &__other {
                     color: #009C41;
@@ -456,8 +431,7 @@ $breakpoint-desktop: 1024px;
 
     &-desk {
       &__title {
-        font-size: $font-size-16;
-        line-height: $line-height-18;
+        @include font-style(16px,18px,normal);
       }
 
       &__subtitle {
@@ -474,8 +448,7 @@ $breakpoint-desktop: 1024px;
     background: #F5F5F5;
     color: $color-dark-gray;
     padding: 0 60px;
-    font-size: $font-size-16;
-    line-height: $line-height-18;
+    @include font-style(16px,18px,normal);
 
   }
 
@@ -486,8 +459,7 @@ $breakpoint-desktop: 1024px;
       padding-top: 48px;
 
       &__desk {
-        font-size: $font-size-12 * 4;
-        line-height: $line-height-55;
+        @include font-style(48px,55px,normal);
       }
 
       &__icon {
@@ -503,14 +475,17 @@ $breakpoint-desktop: 1024px;
     }
 
     &-title {
-      font-size: $font-size-12 *2;
-      line-height: $line-height-28;
+      @include font-style(24px,28px,normal);
     }
 
     &-inputs {
       display: flex;
       flex-direction: column;
       align-items: center;
+
+      & p {
+        @include font-style(24px,28px,normal);
+      }
 
       input {
         @include block-size(350px, 58px);
@@ -521,6 +496,7 @@ $breakpoint-desktop: 1024px;
       justify-content: center;
       button {
         @include block-size(350px, 58px);
+        @include font-style(24px,28px,normal);
         margin: 90px 20px 70px;
       }
     }
@@ -533,7 +509,7 @@ $breakpoint-desktop: 1024px;
     padding-bottom: 20px;
 
     & .main {
-      max-width: 1076px;
+      max-width: 890px;
 
       &-header {
 
@@ -558,8 +534,7 @@ $breakpoint-desktop: 1024px;
           .account {
             &-title {
               height: 58px;
-              font-size: $font-size-30;
-              line-height: $line-height-34;
+              @include font-style(30px,34px,normal);
             }
 
             &-icon {
@@ -585,13 +560,15 @@ $breakpoint-desktop: 1024px;
                 }
 
                 & button {
+                  &:focus {
+                    outline: none;
+                  }
                   @include block-size(284px, 58px);
                   background: $color-green;
                   border-radius: 35px;
                   border: none;
                   color: white;
-                  font-size: $font-size-24;
-                  line-height: $line-height-28;
+                  @include font-style(24px,28px,normal);
                 }
               }
             }
@@ -613,8 +590,7 @@ $breakpoint-desktop: 1024px;
           .sheet {
             &-table {
               width: 100%;
-              font-size: $font-size-14;
-              line-height: $line-height-16;
+              @include font-style(14px,16px,normal);
               border-spacing: 0 10px;
 
 
