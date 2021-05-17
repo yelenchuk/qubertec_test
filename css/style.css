@@ -14,14 +14,16 @@ body {
 .search-bar {
   padding: 7px 13px 13px;
   border-bottom: 1px solid #E9E9E9;
+  display: flex;
 }
 .search-bar input {
-  width: 100%;
   height: 36px;
   background: #EEEEEE;
   border-radius: 30px;
   border: none;
   text-align: end;
+  flex: 1;
+  padding: 0 15px;
 }
 .search-bar input:focus {
   outline: none;
@@ -136,6 +138,10 @@ body {
 }
 .login-inputs__wrap {
   position: relative;
+  display: flex;
+}
+.login-inputs__wrap input {
+  padding: 0 15px;
 }
 .login-inputs__icon {
   position: absolute;

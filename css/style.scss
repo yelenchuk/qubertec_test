@@ -41,16 +41,20 @@ body {
 .search-bar {
   padding: 7px $padding-13 $padding-13;
   border-bottom: 1px solid #E9E9E9;
+  display: flex;
 
   input {
     &:focus {
       outline: none;
     }
-    @include block-size(100%, 36px);
+
+    height: 36px;
     background: #EEEEEE;
     border-radius: 30px;
     border: none;
     text-align: end;
+    flex: 1;
+    padding: 0 15px;
   }
 }
 
@@ -72,13 +76,13 @@ body {
     &__title {
       color: $color-green;
       margin-bottom: 0;
-      @include font-style(10px,10px,normal);
+      @include font-style(10px, 10px, normal);
     }
 
     &__subtitle {
       color: $color-orange;
       margin-top: 3px;
-      @include font-style(12px,16px,normal);
+      @include font-style(12px, 16px, normal);
     }
   }
 
@@ -104,7 +108,7 @@ body {
   background-image: url("../img/login_mobile_bg.jpeg");
 
   &-title {
-    @include font-style(24px,28px,normal);
+    @include font-style(24px, 28px, normal);
     text-align: center;
     padding: 50px 20px 0 20px;
   }
@@ -119,7 +123,7 @@ body {
   position: relative;
 
   &__desk {
-    @include font-style(24px,28px,bold);
+    @include font-style(24px, 28px, bold);
   }
 
   &__icon {
@@ -149,6 +153,7 @@ body {
     &:focus {
       outline: none;
     }
+
     height: 40px;
     width: 100%;
     background: #FFFFFF;
@@ -159,7 +164,7 @@ body {
 
   p {
     text-align: right;
-    @include font-style(18px,21px,normal);
+    @include font-style(18px, 21px, normal);
   }
 
   &__inner {
@@ -169,6 +174,11 @@ body {
 
   &__wrap {
     position: relative;
+    display: flex;
+
+    & input {
+      padding: 0 15px;
+    }
 
   }
 
@@ -177,8 +187,7 @@ body {
     top: 50%;
     transform: translateY(-50%);
     left: 18px;
-    width: 14px;
-    height: 14px;
+    @include block-size(14px, 14px);
 
     & img {
       height: 100%;
@@ -194,13 +203,14 @@ body {
     &:focus {
       outline: none;
     }
+
     border-radius: 35px;
     border: none;
     height: 40px;
     width: 156px;
     margin-top: 90px;
     color: $primary-color;
-    @include font-style(18px,21px,normal);
+    @include font-style(18px, 21px, normal);
 
     &:first-child {
       background-color: $color-gray;
@@ -252,7 +262,7 @@ body {
             border-radius: 35px;
             height: 40px;
             margin: 20px 0;
-            @include font-style(18px,21px,normal);
+            @include font-style(18px, 21px, normal);
             display: flex;
             flex: 1;
 
@@ -308,9 +318,11 @@ body {
               &:focus {
                 outline: none;
               }
+
               &::placeholder {
-                @include font-style(18px,21px,normal);
+                @include font-style(18px, 21px, normal);
               }
+
               flex: 1;
               border: none;
               border-radius: 30px;
@@ -378,12 +390,12 @@ body {
 
                 &-title {
                   color: #797979;
-                  @include font-style(18px,21px,normal);
+                  @include font-style(18px, 21px, normal);
                 }
 
                 &-deck {
                   color: #21325E;
-                  @include font-style(20px,23px,bold);
+                  @include font-style(20px, 23px, bold);
 
                   &__other {
                     color: #009C41;
@@ -431,7 +443,7 @@ $breakpoint-desktop: 1024px;
 
     &-desk {
       &__title {
-        @include font-style(16px,18px,normal);
+        @include font-style(16px, 18px, normal);
       }
 
       &__subtitle {
@@ -448,7 +460,7 @@ $breakpoint-desktop: 1024px;
     background: #F5F5F5;
     color: $color-dark-gray;
     padding: 0 60px;
-    @include font-style(16px,18px,normal);
+    @include font-style(16px, 18px, normal);
 
   }
 
@@ -459,7 +471,7 @@ $breakpoint-desktop: 1024px;
       padding-top: 48px;
 
       &__desk {
-        @include font-style(48px,55px,normal);
+        @include font-style(48px, 55px, normal);
       }
 
       &__icon {
@@ -475,7 +487,7 @@ $breakpoint-desktop: 1024px;
     }
 
     &-title {
-      @include font-style(24px,28px,normal);
+      @include font-style(24px, 28px, normal);
     }
 
     &-inputs {
@@ -484,7 +496,7 @@ $breakpoint-desktop: 1024px;
       align-items: center;
 
       & p {
-        @include font-style(24px,28px,normal);
+        @include font-style(24px, 28px, normal);
       }
 
       input {
@@ -494,9 +506,10 @@ $breakpoint-desktop: 1024px;
 
     &-buttons {
       justify-content: center;
+
       button {
         @include block-size(350px, 58px);
-        @include font-style(24px,28px,normal);
+        @include font-style(24px, 28px, normal);
         margin: 90px 20px 70px;
       }
     }
@@ -534,7 +547,7 @@ $breakpoint-desktop: 1024px;
           .account {
             &-title {
               height: 58px;
-              @include font-style(30px,34px,normal);
+              @include font-style(30px, 34px, normal);
             }
 
             &-icon {
@@ -548,12 +561,13 @@ $breakpoint-desktop: 1024px;
           .search {
 
             &-button {
-              &__small{
+              &__small {
                 display: none;
               }
 
               &__large {
                 display: block;
+
                 & img {
                   width: 15px;
                   margin-right: 10px;
@@ -563,12 +577,13 @@ $breakpoint-desktop: 1024px;
                   &:focus {
                     outline: none;
                   }
+
                   @include block-size(284px, 58px);
                   background: $color-green;
                   border-radius: 35px;
                   border: none;
                   color: white;
-                  @include font-style(24px,28px,normal);
+                  @include font-style(24px, 28px, normal);
                 }
               }
             }
@@ -587,10 +602,11 @@ $breakpoint-desktop: 1024px;
 
         &__sheet {
           display: block;
+
           .sheet {
             &-table {
               width: 100%;
-              @include font-style(14px,16px,normal);
+              @include font-style(14px, 16px, normal);
               border-spacing: 0 10px;
 
 
